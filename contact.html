@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Liên hệ với Nguyễn Thành Kiên - Backend Developer Fresher tại TP.HCM.">
+  <title>Liên hệ | Nguyễn Thành Kiên</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Poppins:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <script defer src="script.js"></script>
+</head>
+<body data-page="contact">
+  <div class="bg-orb orb-one"></div>
+  <div class="bg-orb orb-two"></div>
+
+  <header class="site-header">
+    <div class="container nav-shell">
+      <a class="brand" href="index.html" aria-label="Trang chủ Nguyễn Thành Kiên">
+        <span class="brand-mark">NTK</span>
+        <span class="brand-text">Nguyễn Thành Kiên</span>
+      </a>
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-label="Mở menu điều hướng">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav">
+        <a href="index.html" data-i18n="nav.home">Trang chủ</a>
+        <a href="about.html" data-i18n="nav.about">Giới thiệu</a>
+        <a href="projects.html" data-i18n="nav.projects">Dự án</a>
+        <a href="contact.html" data-i18n="nav.contact">Liên hệ</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="lang-toggle" type="button" aria-label="Chuyển ngôn ngữ"><span data-lang-label>VI</span></button>
+        <button class="theme-toggle" type="button" aria-label="Chuyển giao diện sáng tối">
+          <span class="theme-toggle-track"><span class="theme-toggle-thumb"></span></span>
+          <span data-i18n="theme.label">Light mode</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main class="inner-page">
+    <section class="page-hero">
+      <div class="container page-hero-shell fade-reveal">
+        <span class="section-kicker" data-i18n="contact.hero.kicker">Contact</span>
+        <h1 data-i18n="contact.hero.title">Nếu bạn thấy hồ sơ phù hợp, hãy liên hệ để trao đổi thêm về cơ hội làm việc.</h1>
+        <p data-i18n="contact.hero.desc">Tôi sẵn sàng trao đổi về vị trí Fresher Backend Developer, dự án thực tế hoặc cơ hội học hỏi trong môi trường có quy trình tốt.</p>
+      </div>
+    </section>
+
+    <section class="content-section">
+      <div class="container contact-layout">
+        <article class="content-card tilt-card fade-reveal">
+          <span class="section-kicker" data-i18n="contact.info.kicker">Thông tin liên hệ</span>
+          <h2 data-i18n="contact.info.title">Kết nối nhanh</h2>
+          <div class="contact-list">
+            <div>
+              <span data-i18n="contact.info.emailLabel">Email</span>
+              <a href="mailto:nguyenkien11777@gmail.com">nguyenkien11777@gmail.com</a>
+            </div>
+            <div>
+              <span data-i18n="contact.info.phoneLabel">Số điện thoại</span>
+              <a href="tel:0396162107">0396162107</a>
+            </div>
+            <div>
+              <span data-i18n="contact.info.locationLabel">Địa điểm</span>
+              <p data-i18n="contact.info.locationValue">TP.HCM</p>
+            </div>
+            <div>
+              <span data-i18n="contact.info.cvLabel">CV</span>
+              <a href="assets/cv/nguyen-thanh-kien-cv-placeholder.pdf" download data-i18n="contact.info.cvAction">Tải CV mẫu</a>
+            </div>
+          </div>
+        </article>
+
+        <article class="content-card tilt-card fade-reveal">
+          <span class="section-kicker" data-i18n="contact.form.kicker">Frontend-only form</span>
+          <h2 data-i18n="contact.form.title">Gửi lời nhắn nhanh</h2>
+          <form class="contact-form" id="contact-form">
+            <label>
+              <span data-i18n="contact.form.name">Họ và tên</span>
+              <input type="text" name="name" required>
+            </label>
+            <label>
+              <span data-i18n="contact.form.email">Email</span>
+              <input type="email" name="email" required>
+            </label>
+            <label>
+              <span data-i18n="contact.form.subject">Chủ đề</span>
+              <input type="text" name="subject" required>
+            </label>
+            <label>
+              <span data-i18n="contact.form.message">Nội dung</span>
+              <textarea name="message" rows="5" required></textarea>
+            </label>
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit" data-i18n="contact.form.submit">Gửi lời nhắn</button>
+              <a class="btn btn-secondary" href="mailto:nguyenkien11777@gmail.com?subject=Portfolio%20Contact" data-i18n="contact.form.mailto">Mở email app</a>
+            </div>
+            <p class="form-status" id="form-status" aria-live="polite"></p>
+          </form>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-shell">
+      <div>
+        <strong>Nguyễn Thành Kiên</strong>
+        <p data-i18n="footer.copy">Backend Developer Fresher tập trung vào Laravel, Python và sản phẩm web có tính ứng dụng.</p>
+      </div>
+      <div class="footer-links">
+        <a href="mailto:nguyenkien11777@gmail.com">nguyenkien11777@gmail.com</a>
+        <a href="tel:0396162107">0396162107</a>
+        <a href="projects.html" data-i18n="footer.projects">Xem dự án</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
