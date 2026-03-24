@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520">
+  <defs><linearGradient id="a" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1d6fe9"/><stop offset="1" stop-color="#1fae75"/></linearGradient></defs>
+  <rect width="960" height="520" rx="32" fill="#0b1220"/>
+  <circle cx="170" cy="120" r="90" fill="#f37a20" opacity=".85"/>
+  <rect x="80" y="220" width="360" height="220" rx="18" fill="url(#a)"/>
+  <rect x="470" y="90" width="410" height="90" rx="14" fill="#1e293b"/>
+  <rect x="470" y="210" width="410" height="90" rx="14" fill="#1e293b"/>
+  <rect x="470" y="330" width="410" height="90" rx="14" fill="#1e293b"/>
+  <text x="120" y="295" fill="#fff" font-size="42" font-family="Noto Sans, sans-serif">API · AI</text>
+  <text x="120" y="348" fill="#fff" font-size="24" font-family="Noto Sans, sans-serif">Laravel • Python • UX</text>
+</svg>

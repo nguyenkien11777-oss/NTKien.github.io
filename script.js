@@ -52,6 +52,12 @@ const translations = {
     'skills.database.title': 'Database',
     'skills.frontend.title': 'Frontend',
     'skills.tools.title': 'Tools & Testing',
+    'skills.ai.title': 'Kỹ năng AI',
+    'skills.ai.body': 'ChatGPT, Gemini, prompt engineering, AI-assisted debugging và viết tài liệu kỹ thuật.',
+    'home.art.kicker': 'Creative side',
+    'home.art.title': 'Mình yêu hội họa và dùng tư duy màu sắc để làm UI dễ nhớ hơn.',
+    'home.art.body1': 'Mình thường sketch bố cục trước khi bắt đầu code để ưu tiên nhịp đọc, độ thoáng và cảm giác thị giác.',
+    'home.art.body2': 'Bảng màu ưu thích của mình: cam, xanh dương, xanh lá phối trên nền trắng/đen để giữ tương phản tốt.',
     'home.cta.kicker': 'Sẵn sàng kết nối',
     'home.cta.title': 'Nếu bạn đang tìm một backend fresher nghiêm túc, chủ động và học nhanh, tôi sẵn sàng trao đổi.',
     'home.cta.desc': 'Hãy xem thêm dự án, tải CV hoặc gửi lời nhắn. Tôi muốn tham gia vào đội ngũ có quy trình tốt và bài toán thực tế để phát triển lâu dài.',
@@ -81,6 +87,11 @@ const translations = {
     'about.education.placeholder': 'Ví dụ: Tên trường, chuyên ngành, năm học, GPA hoặc môn học nổi bật liên quan đến backend.',
     'about.education.subTitle': 'Điều tôi đang chủ động rèn luyện',
     'about.education.body': 'API design, database thinking, payment integration, teamwork, code quality và tư duy sản phẩm.',
+    'about.experience.kicker': 'Kinh nghiệm thực tế',
+    'about.experience.title': 'Những việc mình đã trực tiếp làm trong dự án thật.',
+    'about.experience.item1': 'Thiết kế API cho đăng nhập, đơn hàng, sản phẩm; đồng thời hỗ trợ chuẩn hóa convention để team làm nhanh và đồng đều hơn.',
+    'about.experience.item2Title': 'Làm việc với AI trong quy trình',
+    'about.experience.item2': 'Dùng AI để phân tích bug, viết test-case nháp, tạo checklist review và tăng tốc tài liệu hoá cho backend task.',
     'projects.hero.kicker': 'Projects',
     'projects.hero.title': 'Những dự án thể hiện rõ cách tôi xử lý backend, logic nghiệp vụ và tư duy triển khai.',
     'projects.hero.desc': 'Trang này tập trung vào kết quả, vai trò của tôi trong từng dự án và những công nghệ đã được áp dụng thực tế.',
@@ -177,6 +188,12 @@ const translations = {
     'skills.database.title': 'Database',
     'skills.frontend.title': 'Frontend',
     'skills.tools.title': 'Tools & Testing',
+    'skills.ai.title': 'AI Workflow',
+    'skills.ai.body': 'ChatGPT, Gemini, prompt engineering, AI-assisted debugging, and technical documentation support.',
+    'home.art.kicker': 'Creative side',
+    'home.art.title': 'I love painting and use color thinking to make UI more memorable.',
+    'home.art.body1': 'I often sketch composition before coding to improve reading rhythm, spacing, and visual comfort.',
+    'home.art.body2': 'My favorite palette is orange, blue, and green over black/white for strong contrast.',
     'home.cta.kicker': 'Ready to connect',
     'home.cta.title': 'If you are looking for a serious, proactive, and fast-learning backend fresher, I would love to connect.',
     'home.cta.desc': 'Explore more projects, download the CV, or send a message. I want to grow in a team with strong processes and real-world challenges.',
@@ -206,6 +223,11 @@ const translations = {
     'about.education.placeholder': 'Example: school name, major, academic years, GPA, or standout backend-related coursework.',
     'about.education.subTitle': 'What I am actively practicing',
     'about.education.body': 'API design, database thinking, payment integration, teamwork, code quality, and product thinking.',
+    'about.experience.kicker': 'Hands-on experience',
+    'about.experience.title': 'Tasks I directly handled in real projects.',
+    'about.experience.item1': 'Designed APIs for authentication, orders, and products while helping standardize conventions so the team could deliver more consistently.',
+    'about.experience.item2Title': 'AI in my workflow',
+    'about.experience.item2': 'I use AI to analyze bugs, draft test cases, build review checklists, and speed up backend documentation.',
     'projects.hero.kicker': 'Projects',
     'projects.hero.title': 'Projects that show how I approach backend work, business logic, and practical implementation.',
     'projects.hero.desc': 'This page focuses on outcomes, my role in each project, and the technologies applied in real scenarios.',
@@ -384,6 +406,33 @@ function initForm() {
   });
 }
 
+function initPageTransition() {
+  const links = document.querySelectorAll('a[href$=\".html\"]');
+  links.forEach((link) => {
+    link.addEventListener('click', (event) => {
+      const href = link.getAttribute('href');
+      if (!href || href.startsWith('#') || event.metaKey || event.ctrlKey) return;
+      event.preventDefault();
+      root.classList.add('is-leaving');
+      setTimeout(() => {
+        window.location.href = href;
+      }, 220);
+    });
+  });
+}
+
+function initScrollEffects() {
+  const orbs = document.querySelectorAll('.bg-orb');
+  if (!orbs.length) return;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    orbs.forEach((orb, index) => {
+      const speed = index === 0 ? 0.08 : -0.06;
+      orb.style.transform = `translateY(${y * speed}px)`;
+    });
+  }, { passive: true });
+}
+
 langToggle?.addEventListener('click', () => {
   state.lang = state.lang === 'vi' ? 'en' : 'vi';
   applyLanguage();
@@ -402,3 +451,5 @@ initTilt();
 initNav();
 initFilters();
 initForm();
+initPageTransition();
+initScrollEffects();
