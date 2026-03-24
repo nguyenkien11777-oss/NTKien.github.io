@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 520">
+  <rect width="960" height="520" rx="32" fill="#111827"/>
+  <path d="M0 370c170-80 320-40 450 20s270 70 510-20v150H0z" fill="#1d6fe9" opacity=".85"/>
+  <path d="M0 410c150-70 290-30 430 25s300 60 530-30v115H0z" fill="#1fae75" opacity=".88"/>
+  <circle cx="280" cy="170" r="95" fill="#f37a20"/>
+  <circle cx="420" cy="130" r="65" fill="#fff" opacity=".9"/>
+  <circle cx="525" cy="180" r="35" fill="#000"/>
+  <text x="80" y="450" fill="#fff" font-size="38" font-family="Noto Sans, sans-serif">Art-driven UI thinking</text>
+</svg>
